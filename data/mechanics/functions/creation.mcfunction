@@ -22,8 +22,8 @@ execute if block ~ ~-2 ~ iron_block run summon item ~ ~ ~ {Item:{id:"minecraft:a
 execute if block ~ ~-2 ~ iron_block run playsound minecraft:block.beacon.activate block @a ~ ~ ~ 1 2
 execute if block ~ ~-2 ~ iron_block run kill @s
 
-# lapis_block = emmiter
-execute if block ~ ~-2 ~ lapis_block run summon minecraft:armor_stand ~ ~-2 ~ {Invisible:1b,NoGravity:1b,Tags:[mech.device,mech.emmiter,mech.take]}
+# lapis_block = emitter
+execute if block ~ ~-2 ~ lapis_block run summon minecraft:armor_stand ~ ~-2 ~ {Invisible:1b,NoGravity:1b,Tags:[mech.device,mech.emitter,mech.take]}
 execute if block ~ ~-2 ~ lapis_block run setblock ~ ~-1 ~ air
 execute if block ~ ~-2 ~ lapis_block run summon item ~ ~ ~ {Item:{id:"minecraft:armor_stand",Count:1b}}
 execute if block ~ ~-2 ~ lapis_block run playsound minecraft:block.beacon.activate block @a ~ ~ ~ 1 2

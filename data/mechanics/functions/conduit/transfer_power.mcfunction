@@ -4,8 +4,9 @@
 scoreboard players operation $power mech.power = @s mech.power
 execute as @e[type=armor_stand,tag=mech.take,distance=..32] if score @s mech.power < $power mech.power run tag @s add mech.candidate
 
-# select random target
-tag @e[type=armor_stand,tag=mech.candidate,limit=1,sort=random] add mech.chosen
+# select closest target
+# pehaps not closest but lowest, onlt closest of ties
+tag @e[type=armor_stand,tag=mech.candidate,limit=1,sort=nearest] add mech.chosen
 
 # transfer power
 scoreboard players add @e[type=armor_stand,tag=mech.chosen] mech.power 1
