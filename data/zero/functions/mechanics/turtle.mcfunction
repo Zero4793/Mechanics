@@ -10,14 +10,14 @@ scoreboard players set @e[type=armor_stand,tag=Mine,tag=Active,scores={Torch=119
 execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ hopper run tag @s add Items 
 
 #Make
-execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ redstone_lamp if block ~ ~-1 ~1 coal_block if block ~ ~-1 ~-1 coal_block if block ~1 ~-1 ~ coal_block if block ~-1 ~-1 ~ coal_block if block ~1 ~-1 ~1 iron_block if block ~-1 ~-1 ~1 iron_block if block ~1 ~-1 ~-1 iron_block if block ~-1 ~-1 ~-1 iron_block run give @p minecraft:endermite_spawn_egg{display:{Name:"{\"text\":\"Mining Turtle\"}"}} 1
+execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ redstone_lamp if block ~ ~-1 ~1 coal_block if block ~ ~-1 ~-1 coal_block if block ~1 ~-1 ~ coal_block if block ~-1 ~-1 ~ coal_block if block ~1 ~-1 ~1 iron_block if block ~-1 ~-1 ~1 iron_block if block ~1 ~-1 ~-1 iron_block if block ~-1 ~-1 ~-1 iron_block run give @p minecraft:endermite_spawn_egg{display:{Name:'{"text":"Mining Turtle"}'}} 1
 execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ redstone_lamp if block ~ ~-1 ~1 coal_block if block ~ ~-1 ~-1 coal_block if block ~1 ~-1 ~ coal_block if block ~-1 ~-1 ~ coal_block if block ~1 ~-1 ~1 iron_block if block ~-1 ~-1 ~1 iron_block if block ~1 ~-1 ~-1 iron_block if block ~-1 ~-1 ~-1 iron_block run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 air
 execute as @e[type=endermite,name="Mining Turtle"] at @s run summon armor_stand ~ ~ ~ {Invisible:1,Small:1,Tags:[Mine,Device,empty]}
 kill @e[type=minecraft:endermite,name="Mining Turtle"]
 kill @e[type=armor_stand,tag=Kill]
 
 #Destroy
-execute as @e[type=armor_stand,tag=Mine,tag=!Active] at @s if entity @e[tag=tnt,limit=1,distance=..2] run give @p minecraft:endermite_spawn_egg{display:{Name:"{\"text\":\"Mining Turtle\"}"}} 1
+execute as @e[type=armor_stand,tag=Mine,tag=!Active] at @s if entity @e[tag=tnt,limit=1,distance=..2] run give @p minecraft:endermite_spawn_egg{display:{Name:'{"text":"Mining Turtle"}'}} 1
 execute as @e[type=armor_stand,tag=Mine,tag=!Active] at @s if entity @e[tag=tnt,limit=1,distance=..2] run setblock ~ ~ ~ air
 execute as @e[type=armor_stand,tag=Mine,tag=!Active] at @s if entity @e[tag=tnt,limit=1,distance=..2] run kill @s
 #Stop

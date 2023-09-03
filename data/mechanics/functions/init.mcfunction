@@ -5,7 +5,8 @@ scoreboard players set zero.mechanics-a version 0
 scoreboard players set zero.mechanics-b version 1
 
 #scoreboards
-scoreboard objectives add zero.power dummy
+scoreboard objectives add mech.power dummy
 
 #variable init
+scoreboard players set coal_block mech.power 10
 
