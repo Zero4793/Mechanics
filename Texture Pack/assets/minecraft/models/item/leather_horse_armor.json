@@ -7,7 +7,9 @@
     "overrides": [
      {"predicate": {"custom_model_data":1}, "model": "block/custom/turrethead"},
      {"predicate": {"custom_model_data":2}, "model": "block/custom/generator"},
-     {"predicate": {"custom_model_data":3}, "model": "block/custom/conduit"}
+     {"predicate": {"custom_model_data":3}, "model": "block/custom/conduit"},
+     {"predicate": {"custom_model_data":4}, "model": "block/custom/emitter"},
+     {"predicate": {"custom_model_data":5}, "model": "block/custom/regen"}
     
     ]
 }
