@@ -13,7 +13,7 @@ scoreboard players add @e[type=armor_stand,tag=mech.chosen] mech.power 1
 execute if entity @e[type=armor_stand,tag=mech.chosen] run scoreboard players remove @s mech.power 1
 
 # aesthetic
-execute as @s at @s facing entity @e[type=armor_stand,tag=mech.chosen,limit=1] feet run function mechanics:conduit/transfer_particle
+execute as @s at @s facing entity @e[type=armor_stand,tag=mech.chosen,limit=1] feet positioned ^ ^ ^1 run function mechanics:conduit/transfer_particle
 
 # cleanup
 tag @e[type=armor_stand,tag=mech.candidate] remove mech.candidate

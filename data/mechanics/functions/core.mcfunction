@@ -22,8 +22,8 @@ execute as @e[type=armor_stand,tag=mech.generator] at @s positioned ~ ~1 ~ run f
 execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.give] at @s positioned ~ ~1 ~ run function mechanics:conduit/conduit
 
 # Turret
-execute as @e[type=armor_stand,tag=mech.turret] if score @s mech.power matches 1.. at @s run tp @s ~ ~ ~ ~.5 ~
-execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.turret] if score @s mech.power matches 4.. at @s run function mechanics:turret/turret
+# execute as @e[type=armor_stand,tag=mech.turret] if score @s mech.power matches 1.. at @s run tp @s ~ ~ ~ ~.5 ~
+execute as @e[type=armor_stand,tag=mech.turret] at @s run function mechanics:turret/turret
 
 # Emitter
 execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.emitter] if score @s mech.power matches 4.. at @s if entity @e[type=#zero:hostile,distance=..8] run function mechanics:emitter/emitter

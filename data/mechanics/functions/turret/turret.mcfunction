@@ -1,3 +1,3 @@
-scoreboard players remove @s mech.power 4
-playsound minecraft:block.ender_chest.open master @a ~ ~ ~ 2 2
-execute positioned ^ ^1.5 ^ run function mechanics:turret/lazer
+execute rotated as @p[distance=..2] run tp @s ~ ~ ~ ~ 0
+execute if entity @p[distance=..2] if score zero.tick server matches 0 if score @s mech.power matches 4.. run function mechanics:turret/shoot
+# TODO: add crouch detection for firing
