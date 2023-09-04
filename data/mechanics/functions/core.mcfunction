@@ -27,3 +27,6 @@ execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.turr
 
 # Emitter
 execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.emitter] if score @s mech.power matches 4.. at @s if entity @e[type=#zero:hostile,distance=..8] run function mechanics:emitter/emitter
+
+# Regenerator
+execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.regenerator] if score @s mech.power matches 4.. at @s if entity @e[type=#zero:anti_hostile,distance=..4] run function mechanics:regenerator/regenerator
