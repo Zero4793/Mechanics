@@ -1,11 +1,13 @@
-# give self 1 mech.power to random mech.conduit within range(32) that has less mech.power than self
+# give self 1 mech.power to closest of lowest power mech.take within range(32) if any lower than self
 
-# select all possible targets
-scoreboard players operation $power mech.power = @s mech.power
-execute as @e[type=armor_stand,tag=mech.take,distance=..32] if score @s mech.power < $power mech.power run tag @s add mech.candidate
+# set $min to @s mech.power - 1
+scoreboard players operation $min mech.power = @s mech.power
+scoreboard players remove $min mech.power 1
 
-# select closest target
-# pehaps not closest but lowest, onlt closest of ties
+# run thru all mech.take within range(32), find min (ties kept), ignore those at max storage
+execute as @e[type=armor_stand,tag=mech.take,distance=..32] if score @s mech.capacity > @s mech.power run function mechanics:conduit/find_min
+
+# select nearest candidate (tied lowest value if lower than self)
 tag @e[type=armor_stand,tag=mech.candidate,limit=1,sort=nearest] add mech.chosen
 
 # transfer power

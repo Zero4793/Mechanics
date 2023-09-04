@@ -7,6 +7,7 @@ scoreboard players set zero.mechanics-b version 1
 #scoreboards
 scoreboard objectives add mech.power dummy
 scoreboard objectives add mech.bandwidth dummy
+scoreboard objectives add mech.capacity dummy
 
 #variable init
 scoreboard players set coal_block mech.power 10

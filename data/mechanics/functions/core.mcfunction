@@ -30,3 +30,6 @@ execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.emit
 
 # Regenerator
 execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.regenerator] if score @s mech.power matches 4.. at @s if entity @e[type=#zero:anti_hostile,distance=..4] run function mechanics:regenerator/regenerator
+
+# range detection
+# execute if score zero.tick server matches 0 as @a at @s facing entity @e[tag=mech.device,distance=..32] feet run function mechanics:range
