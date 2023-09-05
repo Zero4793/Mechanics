@@ -11,14 +11,14 @@ tag @e[type=item,nbt={Item:{id:"minecraft:tnt"}}] add tnt
 execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ hopper run tag @s add Items 
 
 #Make
-execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ redstone_lamp if block ~ ~-1 ~1 diamond_block if block ~ ~-1 ~-1 diamond_block if block ~1 ~-1 ~ diamond_block if block ~-1 ~-1 ~ diamond_block if block ~1 ~-1 ~1 iron_block if block ~-1 ~-1 ~1 iron_block if block ~1 ~-1 ~-1 iron_block if block ~-1 ~-1 ~-1 iron_block run give @p minecraft:endermite_spawn_egg{display:{Name:"{\"text\":\"Auto Miner\"}"}} 1
+execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ redstone_lamp if block ~ ~-1 ~1 diamond_block if block ~ ~-1 ~-1 diamond_block if block ~1 ~-1 ~ diamond_block if block ~-1 ~-1 ~ diamond_block if block ~1 ~-1 ~1 iron_block if block ~-1 ~-1 ~1 iron_block if block ~1 ~-1 ~-1 iron_block if block ~-1 ~-1 ~-1 iron_block run give @p minecraft:endermite_spawn_egg{display:{Name:'{"text":"Auto Miner"}'}} 1
 execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ redstone_lamp if block ~ ~-1 ~1 diamond_block if block ~ ~-1 ~-1 diamond_block if block ~1 ~-1 ~ diamond_block if block ~-1 ~-1 ~ diamond_block if block ~1 ~-1 ~1 iron_block if block ~-1 ~-1 ~1 iron_block if block ~1 ~-1 ~-1 iron_block if block ~-1 ~-1 ~-1 iron_block run tag @s add Drop
 execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ redstone_lamp if block ~ ~-1 ~1 diamond_block if block ~ ~-1 ~-1 diamond_block if block ~1 ~-1 ~ diamond_block if block ~-1 ~-1 ~ diamond_block if block ~1 ~-1 ~1 iron_block if block ~-1 ~-1 ~1 iron_block if block ~1 ~-1 ~-1 iron_block if block ~-1 ~-1 ~-1 iron_block run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 air
 execute as @e[type=endermite,name="Auto Miner"] at @s run summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:[Miner,Device,Machine,empty]}
 kill @e[type=minecraft:endermite,name="Auto Miner"]
 
 #Destroy
-execute as @e[type=area_effect_cloud,tag=Miner,tag=!Active] at @s if entity @e[tag=tnt,limit=1,distance=..2] run give @p minecraft:endermite_spawn_egg{display:{Name:"{\"text\":\"Auto Miner\"}"}} 1
+execute as @e[type=area_effect_cloud,tag=Miner,tag=!Active] at @s if entity @e[tag=tnt,limit=1,distance=..2] run give @p minecraft:endermite_spawn_egg{display:{Name:'{"text":"Auto Miner"}'}} 1
 execute as @e[type=area_effect_cloud,tag=Miner,tag=!Active] at @s if entity @e[tag=tnt,limit=1,distance=..2] run setblock ~ ~ ~ air
 execute as @e[type=area_effect_cloud,tag=Miner,tag=!Active] at @s if entity @e[tag=tnt,limit=1,distance=..2] run kill @s
 #Stop
