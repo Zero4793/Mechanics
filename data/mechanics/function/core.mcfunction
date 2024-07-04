@@ -1,8 +1,5 @@
 #Zero_4793
 
-execute if score zero.datapackLoad server matches 1 run scoreboard players add zero.datapackCount server 1
-execute if score zero.datapackLoad server matches 1 run tellraw @a [{"color":"aqua","text":"  "},{"text":"Mechanics ","hoverEvent":{"action":"show_text","contents":{"text":"Automated machines for mining, defence and more!","color":"blue"}},"color":"aqua","bold":true},{"text":"v"},{"score":{"name":"zero.mechanics-a","objective":"version"}},{"text":"."},{"score":{"name":"zero.mechanics-b","objective":"version"}},{"color":"dark_purple","text":" by Team Vortex","hoverEvent":{"action":"show_text","contents":{"text":"Open PlanetMinecraft page for Team Vortex","color":"green"}},"clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/member/teamvortex/"}}]
-
 # Shared
 # Creation
 execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ redstone_lamp run function mechanics:creation

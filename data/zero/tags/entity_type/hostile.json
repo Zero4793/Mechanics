@@ -1,0 +1,21 @@
+{
+	"values": [
+		"#zero:undead",
+		"#zero:illagers",
+		"#zero:arthropods",
+		"minecraft:blaze",
+		"minecraft:creeper",
+		"minecraft:guardian",
+		"minecraft:elder_guardian",
+		"minecraft:ghast",
+		"minecraft:hoglin",
+		"minecraft:magma_cube",
+		"minecraft:piglin",
+		"minecraft:piglin_brute",
+		"minecraft:ravager",
+		"minecraft:shulker",
+		"minecraft:slime",
+		"minecraft:vex",
+		"minecraft:enderman"
+	]
+} 

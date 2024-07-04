@@ -1,8 +1,6 @@
 #Zero_4793
-
-#version
-scoreboard players set zero.mechanics-a version 0
-scoreboard players set zero.mechanics-b version 1
+# tellraw @a {"text":"Mechanics Loaded!"}
+say Mecahics Loaded!
 
 #scoreboards
 scoreboard objectives add mech.power dummy
