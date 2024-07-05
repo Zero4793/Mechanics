@@ -7,6 +7,7 @@ v0.2
 	Updated to datapack format 48
 	No longer requires nucleus
 	Added Fire Suppresser
+	Added Auto Miner
 # Plan
 - port over most mechanics from the old game
 - convert auto miner and elevator(if added) to fuel system

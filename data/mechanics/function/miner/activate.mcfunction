@@ -1,0 +1,2 @@
+execute align xyz positioned ~.5 ~ ~.5 facing entity @n[type=armor_stand,tag=!mech.miner,distance=..2] feet run tp @s ~ ~ ~ ~ 0
+execute align xyz positioned ~.5 ~ ~.5 if entity @e[type=armor_stand,tag=!mech.miner,distance=..2] run tag @s add active

@@ -53,7 +53,7 @@ execute if block ~ ~-2 ~ sponge run playsound minecraft:block.beacon.activate bl
 execute if block ~ ~-2 ~ sponge run kill @s
 
 # observer = auto miner
-execute if block ~ ~-2 ~ observer run summon minecraft:armor_stand ~ ~-2 ~ {Invisible:1b,NoGravity:1b,Tags:[mech.miner,mech.generator,mech.device,mech.take],DisabledSlots:4095}
+execute if block ~ ~-2 ~ observer run summon minecraft:armor_stand ~ ~-2 ~ {Invisible:1b,NoGravity:1b,Tags:[mech.miner,mech.generator,mech.device,mech.take],Small:1b,DisabledSlots:4095}
 execute if block ~ ~-2 ~ observer positioned ~ ~-2 ~ run scoreboard players set @e[type=armor_stand,tag=mech.miner,distance=..1] mech.capacity 64
 execute if block ~ ~-2 ~ observer positioned ~ ~-1 ~ run item replace entity @e[type=armor_stand,tag=mech.miner,distance=..1] armor.head with leather_horse_armor
 execute if block ~ ~-2 ~ observer run setblock ~ ~-1 ~ air
