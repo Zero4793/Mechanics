@@ -39,5 +39,4 @@ execute if score zero.tick server matches 0 as @e[type=armor_stand] at @s if blo
 execute if score zero.tick server matches 0 as @e[type=armor_stand] at @s if block ~ ~ ~ hopper run tag @s add mech.device
 
 # range detection
-# TODO: make this happen when holding item (like wrench)
-# execute if score zero.tick server matches 0 as @a at @s facing entity @e[tag=mech.device,distance=..32] feet run function mechanics:range
+execute if score zero.tick server matches 0 as @a[nbt={SelectedItem:{id:"minecraft:armor_stand"}}] at @s facing entity @e[tag=mech.device,distance=..32] feet run function mechanics:range
