@@ -3,6 +3,7 @@
 say Mecahics Loaded!
 
 #scoreboards
+scoreboard objectives add mech.num dummy
 scoreboard objectives add mech.power dummy
 scoreboard objectives add mech.bandwidth dummy
 scoreboard objectives add mech.capacity dummy

@@ -6,9 +6,9 @@ v0.1
 v0.2
 	Updated to datapack format 48
 	No longer requires nucleus
+	Added Fire Suppresser
 # Plan
 - port over most mechanics from the old game
 - convert auto miner and elevator(if added) to fuel system
 - only add elevator if shulker version, since block & tp not worth it
-- add fire popper
 # Ideas

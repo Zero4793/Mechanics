@@ -43,4 +43,13 @@ execute if block ~ ~-2 ~ gold_block run summon item ~ ~ ~ {Item:{id:"minecraft:a
 execute if block ~ ~-2 ~ gold_block run playsound minecraft:block.beacon.activate block @a ~ ~ ~ 1 2
 execute if block ~ ~-2 ~ gold_block run kill @s
 
+# sponge = fire stopper
+execute if block ~ ~-2 ~ sponge run summon minecraft:armor_stand ~ ~-2 ~ {Invisible:1b,NoGravity:1b,Tags:[mech.fire,mech.device,mech.take],DisabledSlots:4095}
+execute if block ~ ~-2 ~ sponge positioned ~ ~-2 ~ run scoreboard players set @e[type=armor_stand,tag=mech.fire,distance=..1] mech.capacity 8
+execute if block ~ ~-2 ~ sponge positioned ~ ~-1 ~ run item replace entity @e[type=armor_stand,tag=mech.fire,distance=..1] armor.head with leather_horse_armor
+execute if block ~ ~-2 ~ sponge run setblock ~ ~-1 ~ air
+execute if block ~ ~-2 ~ sponge run summon item ~ ~ ~ {Item:{id:"minecraft:armor_stand",count:1b}}
+execute if block ~ ~-2 ~ sponge run playsound minecraft:block.beacon.activate block @a ~ ~ ~ 1 2
+execute if block ~ ~-2 ~ sponge run kill @s
+
 scoreboard players add @e[tag=mech.device] mech.power 0
