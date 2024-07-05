@@ -1,17 +1,19 @@
 # stop if blocked
-execute if block ^ ^ ^2 #zero:unminable run return fail
-execute if block ^ ^1 ^2 #zero:unminable run return fail
-execute if block ^ ^2 ^2 #zero:unminable run return fail
-execute if block ^-1 ^ ^2 #zero:unminable run return fail
-execute if block ^-1 ^1 ^2 #zero:unminable run return fail
-execute if block ^-1 ^2 ^2 #zero:unminable run return fail
-execute if block ^1 ^ ^2 #zero:unminable run return fail
-execute if block ^1 ^1 ^2 #zero:unminable run return fail
-execute if block ^1 ^2 ^2 #zero:unminable run return fail
+execute if block ^ ^ ^2 #zero:unminable run return run tag @s remove active
+execute if block ^ ^1 ^2 #zero:unminable run return run tag @s remove active
+execute if block ^ ^2 ^2 #zero:unminable run return run tag @s remove active
+execute if block ^-1 ^ ^2 #zero:unminable run return run tag @s remove active
+execute if block ^-1 ^1 ^2 #zero:unminable run return run tag @s remove active
+execute if block ^-1 ^2 ^2 #zero:unminable run return run tag @s remove active
+execute if block ^1 ^ ^2 #zero:unminable run return run tag @s remove active
+execute if block ^1 ^1 ^2 #zero:unminable run return run tag @s remove active
+execute if block ^1 ^2 ^2 #zero:unminable run return run tag @s remove active
 
 fill ^-1 ^ ^2 ^1 ^2 ^2 air destroy
 tp @e[type=item,distance=..4] @e[type=armor_stand,tag=mech.item_collector,sort=random,limit=1,distance=..64]
 tp @e[type=experience_orb,distance=..4] @e[type=armor_stand,tag=mech.item_collector,sort=random,limit=1,distance=..64]
+
+execute align xyz positioned ~.5 ~ ~.5 if block ^ ^-1 ^1 air run return run tag @s remove active
 
 setblock ~ ~ ~ air
 execute align xyz positioned ~.5 ~ ~.5 run setblock ^ ^ ^1 observer

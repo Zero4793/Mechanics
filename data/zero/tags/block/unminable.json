@@ -1,6 +1,8 @@
 {
 	"values": [
 		"#zero:unbreakable",
-		"#dragon_immune"
+		"#dragon_immune",
+		"water",
+		"lava"
 	]
 }
