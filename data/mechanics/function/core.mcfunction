@@ -31,6 +31,11 @@ execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.rege
 # Fire stopper
 execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.fire] if score @s mech.power matches 1.. at @s run function mechanics:fire/fire
 
+# Auto Miner
+execute if score zero.tick server matches 0 as @e[type=armor_stand,tag=mech.miner] if score @s mech.power matches 4.. at @s run function mechanics:miner/miner
+# Item Collector
+execute if score zero.tick server matches 0 as @e[type=armor_stand] at @s if block ~ ~ ~ hopper run tag @s add mech.item_collector
+
 # range detection
 # TODO: make this happen when holding item (like wrench)
 # execute if score zero.tick server matches 0 as @a at @s facing entity @e[tag=mech.device,distance=..32] feet run function mechanics:range
