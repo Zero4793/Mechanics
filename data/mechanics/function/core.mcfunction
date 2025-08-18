@@ -2,7 +2,7 @@
 
 # Shared
 # Creation
-execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ redstone_lamp run function mechanics:creation
+execute as @e[type=armor_stand] at @s if block ~ ~-1 ~ copper_bulb run function mechanics:creation
 # Destruction
 execute as @e[type=armor_stand,tag=mech.device] at @s if block ~ ~ ~ air run function mechanics:destruction
 # execute as @e[type=armor_stand,tag=mech.device] at @s if block ~ ~1 ~ air run function mechanics:destruction
